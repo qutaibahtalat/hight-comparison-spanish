@@ -185,8 +185,6 @@ const AddPerson = () => {
           Máximo {MAX_AVATARS} personas. Elimina una para añadir otra.
         </Message>
       )}
-      {/* Ad 2 below Add button */}
-      <AdsenseUnit slot="9684228332" format="auto" responsive={true} className="block lg:hidden" />
     </div>
   );
 };
