@@ -60,7 +60,7 @@ export default function Home() {
       </div>
       <div className="flex flex-col lg:flex-row gap-2.5">
         <div className="w-full md:min-w-[400px] md:max-w-[400px]">
-          <AdsenseUnit slot="7985047243" format="auto" responsive={true} />
+          
         </div>
         <Content />
       </div>
