@@ -19,6 +19,25 @@ interface Props {
 const svgCache = new Map<string, string>();
 
 const SvgInline: React.FC<Props> = ({ url, fill }) => {
+  // If the SVG is hosted on a different origin, fetching it will trigger CORS.
+  // Instead, fall back to a normal <img> tag (colour tint will be ignored).
+  if (typeof window !== "undefined") {
+    try {
+      const u = new URL(url, window.location.origin);
+      if (u.origin !== window.location.origin) {
+        return (
+          <img
+            src={url}
+            alt="avatar"
+            className="h-full w-auto"
+            draggable={false}
+          />
+        );
+      }
+    } catch (_) {
+      /* malformed URL – allow normal flow */
+    }
+  }
   const cacheKey = `${url}|${fill}`;
   const [markup, setMarkup] = useState<string | null>(svgCache.get(cacheKey) || null);
   const [isErrored, setIsErrored] = useState(false);
