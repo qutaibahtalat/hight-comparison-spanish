@@ -31,6 +31,7 @@ export default function RootLayout({
     <html suppressHydrationWarning>
       <head>
         <meta name="google-site-verification" content="Q5vf4BwqS69WGAaE2QZF_ovxGAVtgW_Jdq6kC_8zY7M" />
+        <link rel="icon" href="/icon.png?v=3" type="image/png" sizes="32x32" />
         {`/* Microsoft Clarity */`}
         <script
           dangerouslySetInnerHTML={{

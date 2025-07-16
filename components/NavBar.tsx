@@ -55,10 +55,10 @@ const NavBar = ({ className }: { className?: string }) => {
         )}
       </nav>
       <AdsenseUnit
-        slot="1419638897"
+        slot="1353440037"
         format="auto"
         responsive={true}
-        className="!hidden lg:block"
+        className="block lg:hidden"
       />
     </>
   );

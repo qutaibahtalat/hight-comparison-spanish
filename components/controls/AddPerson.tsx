@@ -11,6 +11,7 @@ import toast from "react-hot-toast";
 import { v4 } from "uuid";
 import Input from "@/components/ui/Input";
 import Message from "../ui/Message";
+import AdsenseUnit from "@/components/google-ads/AdsenseUnit";
 import { AvatarCategory, BodyType, Gender, ItemType } from "@/misc/enums";
 import { colors, MAX_AVATARS } from "@/misc/data";
 import { getAnonymouseAvatar } from "@/utils/getAnonymouseAvatar";
@@ -184,6 +185,8 @@ const AddPerson = () => {
           Máximo {MAX_AVATARS} personas. Elimina una para añadir otra.
         </Message>
       )}
+      {/* Ad 2 below Add button */}
+      <AdsenseUnit slot="9684228332" format="auto" responsive={true} />
     </div>
   );
 };

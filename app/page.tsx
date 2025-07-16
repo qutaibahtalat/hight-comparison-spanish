@@ -75,7 +75,7 @@ const Content = () => {
   return (
     <div className="max-w-screen-2xl mx-auto px-6 lg:px-12 py-8 [&_p]:text-sm [&_h2]:text-xl [&_h2]:font-bold [&_h2]:text-gray-800 [&_h3]:text-lg [&_h3]:font-bold [&_h3]:text-gray-800 [&_h3]:mt-4 [&_h2]:mt-4 [&_p]:mt-2 [&_ul]:list-disc [&_ul]:list-inside [&_ul]:space-y-2  [&_ul]:text-sm [&_ul]:mt-2 [&_li]:text-sm [&_li]:mt-2 [&_li]:mb-2">
       <p>
-        HeightComparisonChart.com tiene una herramienta simple pero poderosa para comparar estaturas con tu pareja, hijos, mascotas, celebridades, personajes ficticios o incluso con monumentos famosos. Con solo unos clics, puedes hacer una comparación visual de alturas sin perder tiempo buscando entre innumerables aplicaciones o sitios web.
+        <a href="https://HeightComparisonChart.com" target="_blank" rel="noopener noreferrer" className="text-primary underline">HeightComparisonChart.com</a> tiene una herramienta simple pero poderosa para comparar estaturas con tu pareja, hijos, mascotas, celebridades, personajes ficticios o incluso con monumentos famosos. Con solo unos clics, puedes hacer una comparación visual de alturas sin perder tiempo buscando entre innumerables aplicaciones o sitios web.
       </p>
       <h2>Cómo Usar el Comparador de Alturas</h2>
       <p>
