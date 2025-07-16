@@ -35,6 +35,6 @@ const footerLinks = [
   },
   {
     title: "Sitemap",
-    href: `${APP_URL}/sitemap.xml`,
+    href: "/sitemap.xml",
   },
 ];
