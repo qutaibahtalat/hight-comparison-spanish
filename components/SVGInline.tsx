@@ -35,7 +35,7 @@ const SvgInline: React.FC<Props> = ({ url, fill }) => {
     // Otherwise fetch & process
     (async () => {
       try {
-        const res = await fetch(`/api/proxy-svg?url=${encodeURIComponent(url)}`);
+        const res = await fetch(url);
         const original = await res.text();
 
         // Parse & apply fill
