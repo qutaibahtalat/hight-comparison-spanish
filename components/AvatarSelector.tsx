@@ -55,9 +55,10 @@ const AvatarSelector = ({
     <div>
       {avatarCategory === AvatarCategory.ADULT ? (
         <>
-          <SectionTitle className="">Select Avatar</SectionTitle>
+          <SectionTitle className="">Seleccionar Avatar</SectionTitle>
           <TabStyleRadio
             options={Object.values(BodyType)}
+            labels={["Ectomorfo", "Mesomorfo", "Endomorfo"]}
             value={bodyType}
             onChange={(bodyType) => onBodyTypeChange(bodyType as BodyType)}
             className="text-[12px] capitalize mb-2"
@@ -98,9 +99,10 @@ const AvatarSelector = ({
                 Math.min(INITIAL_SHOW_COUNT, (persons?.length ?? 0) - showCount)
             )
           }
-          className="flex items-center justify-center gap-2 cursor-pointer my-3"
+          className="flex items-center justify-center gap-1 text-sm cursor-pointer mt-2 text-primary"
         >
-          Load More <RiSkipDownLine size={18} />
+          Cargar más
+          <RiSkipDownLine />
         </div>
       )}
     </div>

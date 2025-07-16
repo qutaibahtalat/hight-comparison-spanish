@@ -123,14 +123,14 @@ const BoardUtilities = () => {
             className="bg-white !text-black border border-gray-200 flex items-center gap-2 p-2 text-sm"
             onClick={() => setAvatars([])}
           >
-            Clear
+            Eliminar
             <RxCrossCircled size={15} />
           </Button>
           <Button
             className="bg-white !text-black border border-gray-200 flex items-center gap-2 p-2 text-sm"
-            onClick={() => setSelectedScreen("Edit Persons")}
+            onClick={() => setSelectedScreen("Editar personas")}
           >
-            Edit
+            Editar
             <TbEditCircle size={15} />
           </Button>
         </div>
@@ -138,7 +138,7 @@ const BoardUtilities = () => {
           className="!w-fit flex items-center gap-1 p-2 text-sm"
           onClick={handleShare}
         >
-          Share
+          Compartir
           <IoMdShare size={15} />
         </Button>
       </div>
@@ -173,7 +173,7 @@ const ShareLinkDialog = ({
         className="absolute top-2 right-2 cursor-pointer"
         onClick={onClose}
       />
-      <h3 className="text-xl font-bold">Share</h3>
+      <h3 className="text-xl font-bold">Compartir</h3>
       {loading ? (
         <CgSpinner size={30} className="animate-spin" />
       ) : shareLink ? (
@@ -187,20 +187,18 @@ const ShareLinkDialog = ({
           <Button
             onClick={() => {
               navigator.clipboard.writeText(shareLink);
-              toast.success("Copied to clipboard");
+              toast.success("Copiado al portapapeles");
             }}
             className="flex items-center gap-1 justify-center max-w-fit"
           >
-            Copy
+            Copiar
             <IoMdCopy size={20} />
           </Button>
         </div>
       ) : (
         <div className="flex flex-col items-center gap-2">
           <MdReportProblem size={50} color="#FF5722" />
-          <p className="text-sm text-gray-500">
-            Failed to generate share link, please try again later
-          </p>
+          <p className="text-center">Error al generar enlace</p>
         </div>
       )}
     </dialog>

@@ -69,7 +69,9 @@ const FilterCelebrities = ({ category }: { category: string }) => {
           </Message>
         ) : (
           <div>
-            <SectionTitle className="capitalize">{category}</SectionTitle>
+            <SectionTitle className="capitalize">
+              {category === "Celebrities" ? "Celebridades" : "Ficticia"}
+            </SectionTitle>
             <Select
               options={(subcategories || [])?.map((subcat) => ({
                 label: subcat.name,
@@ -78,7 +80,7 @@ const FilterCelebrities = ({ category }: { category: string }) => {
               isSearchable={false}
               classNames={classes}
               isLoading={subcategoriesLoading}
-              placeholder="Select Category"
+              placeholder="Seleccionar categoría"
               value={subcat}
               onChange={(selectedOption) => {
                 setSubcat(selectedOption || null);
@@ -106,7 +108,7 @@ const FilterCelebrities = ({ category }: { category: string }) => {
               isSearchable={false}
               classNames={classes}
               isLoading={loading2}
-              placeholder="Select Subcategory"
+              placeholder="Seleccionar subcategoría"
               value={subcat2}
               onChange={(selectedOption) => {
                 setSubcat2(selectedOption || null);

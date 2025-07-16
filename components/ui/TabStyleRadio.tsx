@@ -1,11 +1,13 @@
 const TabStyleRadio = ({
   options,
+  labels = options,
   value,
   onChange,
   padding = "p-1",
   className = "",
 }: {
   options: string[];
+  labels?: string[];
   value?: string;
   onChange: (value: string) => void;
   padding?: string;
@@ -23,7 +25,7 @@ const TabStyleRadio = ({
             value === o && "bg-white"
           }`}
         >
-          {o}
+          {labels[index]}
         </span>
       ))}
     </div>

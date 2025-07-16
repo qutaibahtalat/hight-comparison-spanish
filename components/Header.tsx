@@ -19,16 +19,18 @@ const Header = () => {
           isMobileMenuOpen ? "left-0" : "-left-full"
         }`}
       >
-        {Object.values(routes).map((route, index) => (
-          <Link
-            key={index}
-            href={route.path}
-            target={route?.target || "_self"}
-            className="text-base font-medium"
-          >
-            {route.title}
-          </Link>
-        ))}
+        {Object.values(routes)
+  .filter(route => route.showInNav)
+  .map((route, index) => (
+    <Link
+      key={index}
+      href={route.path}
+      target={route?.target || "_self"}
+      className="text-base font-medium"
+    >
+      {route.title}
+    </Link>
+  ))}
         <IoCloseOutline
           size={24}
           onClick={() => setIsMobileMenuOpen(false)}
@@ -41,7 +43,7 @@ const Header = () => {
         className="font-medium text-[#c92228] text-sm md:text-lg bg-[#c92228]/10 rounded-xl px-2 md:px-4 py-3 flex items-center gap-2"
       >
         <BsPinterest />
-        Join Pinterest
+        Únete a Pinterest
       </Link>
       <IoMenuOutline
         size={24}

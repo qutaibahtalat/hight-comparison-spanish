@@ -2,41 +2,43 @@ import { APP_URL } from "@/misc/routes";
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = "https://es.heightcomparisonchart.com";
+  
   return [
     {
-      url: APP_URL,
-      lastModified: "2025-02-06",
-      changeFrequency: "never",
+      url: baseUrl,
+      lastModified: new Date().toISOString().split('T')[0],
+      changeFrequency: "monthly",
       priority: 1,
     },
     {
-      url: `${APP_URL}/about`,
-      lastModified: "2025-02-06",
-      changeFrequency: "never",
+      url: `${baseUrl}/about`,
+      lastModified: new Date().toISOString().split('T')[0],
+      changeFrequency: "yearly",
       priority: 0.8,
     },
     {
-      url: `${APP_URL}/contact`,
-      lastModified: "2025-02-06",
-      changeFrequency: "never",
+      url: `${baseUrl}/contact`,
+      lastModified: new Date().toISOString().split('T')[0],
+      changeFrequency: "yearly",
       priority: 0.7,
     },
     {
-      url: `${APP_URL}/faq`,
-      lastModified: "2025-02-06",
-      changeFrequency: "never",
+      url: `${baseUrl}/Preguntas-Frecuentes`,
+      lastModified: new Date().toISOString().split('T')[0],
+      changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${APP_URL}/privacy`,
-      lastModified: "2025-02-06",
-      changeFrequency: "never",
+      url: `${baseUrl}/privacy`,
+      lastModified: new Date().toISOString().split('T')[0],
+      changeFrequency: "yearly",
       priority: 0.6,
     },
     {
-      url: `${APP_URL}/terms`,
-      lastModified: "2025-02-06",
-      changeFrequency: "never",
+      url: `${baseUrl}/terms`,
+      lastModified: new Date().toISOString().split('T')[0],
+      changeFrequency: "yearly",
       priority: 0.5,
     },
   ];

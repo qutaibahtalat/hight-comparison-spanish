@@ -4,8 +4,8 @@ import { EMAIL } from "@/misc/data";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Contact Us - Height Comparison Chart",
-  description: "Contact us at HeightComparisonChart.com",
+  title: "Contacto",
+  description: "non",
 };
 
 function ContactPage() {
@@ -13,11 +13,10 @@ function ContactPage() {
     <div className="max-w-screen-xl flex justify-center items-center h-screen mx-auto px-6 py-12 ">
       <section className="mb-12 p-8 bg-white rounded-xl shadow-md">
         <h1 className="text-5xl font-extrabold text-gray-900 mb-6 text-center">
-          Contact Us
+          Contáctanos
         </h1>
         <p className="text-gray-700 text-lg leading-relaxed text-center mb-6">
-          If you have any questions, concerns, suggestions, or feedback, feel
-          free to send us a message at
+          Si tienes preguntas, inquietudes, sugerencias o comentarios, no dudes en enviarnos un mensaje a
           <Link
             href={`mailto:${EMAIL}`}
             className="text-blue-600 font-medium hover:underline"

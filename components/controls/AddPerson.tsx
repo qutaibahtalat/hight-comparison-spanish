@@ -86,10 +86,9 @@ const AddPerson = () => {
     <div className="w-full min-h-full space-y-3">
       <div className="flex items-center justify-between gap-2">
         <TabStyleRadio
-          options={Object.values(Gender)}
-          value={
-            data.avatarCategory === AvatarCategory.ADULT ? data.gender : ""
-          }
+          options={[Gender.MALE, Gender.FEMALE]}
+          labels={["Hombre", "Mujer"]}
+          value={data.avatarCategory === AvatarCategory.ADULT ? data.gender : ""}
           onChange={(gender) => {
             setState("gender", gender);
             setState("avatarCategory", AvatarCategory.ADULT);
@@ -98,6 +97,7 @@ const AddPerson = () => {
         />
         <TabStyleRadio
           options={[AvatarCategory.CHILD, AvatarCategory.PET]}
+          labels={["Bebé", "Mascota"]}
           value={data.avatarCategory}
           className="capitalize w-1/3"
           onChange={(avatarCategory) => {
@@ -129,13 +129,13 @@ const AddPerson = () => {
       <div className="flex items-center justify-between gap-2">
         <Input
           name="name"
-          placeholder="Name"
+          placeholder="Nombre"
           value={data.name}
           onChange={(value) => setState("name", value)}
         />
         <Input
           name="weight"
-          placeholder="Weight (kg)"
+          placeholder="Peso (kg)"
           value={data.weight === 0 ? "" : data.weight}
           type="number"
           onChange={(value) => setState("weight", value)}
@@ -150,12 +150,12 @@ const AddPerson = () => {
       />
       {data.avatarCategory === AvatarCategory.CHILD && (
         <div>
-          <SectionTitle>Gender</SectionTitle>
+          <SectionTitle>Género</SectionTitle>
           <TabStyleRadio
-            options={["Boy", "Girl"]}
-            value={data.gender === Gender.MALE ? "Boy" : "Girl"}
+            options={["Chico", "Chica"]}
+            value={data.gender === Gender.MALE ? "Chico" : "Chica"}
             onChange={(option) =>
-              setState("gender", option === "Boy" ? Gender.MALE : Gender.FEMALE)
+              setState("gender", option === "Chico" ? Gender.MALE : Gender.FEMALE)
             }
             className="capitalize w-full text-[12px]"
           />
@@ -176,12 +176,12 @@ const AddPerson = () => {
           onClick={handleAddAvatar}
           className="flex items-center gap-2 justify-center"
         >
-          Add
+          Añadir
           <IoMdAddCircleOutline />
         </Button>
       ) : (
         <Message variant="error">
-          Max {MAX_AVATARS} people at a time. Remove one to add another.
+          Máximo {MAX_AVATARS} personas. Elimina una para añadir otra.
         </Message>
       )}
     </div>

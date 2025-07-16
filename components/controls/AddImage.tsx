@@ -38,7 +38,7 @@ const AddImage = () => {
   }, [image]);
   return (
     <div className="w-full h-full space-y-2.5">
-      <SectionTitle>Add your own image</SectionTitle>
+      <SectionTitle>Añade tu propia imagen</SectionTitle>
       <label className="border border-primary border-dashed  rounded-xl p-5 bg-primary/5 flex flex-col justify-center items-center gap-2.5 cursor-pointer min-h-[250px]">
         {avatars.length < MAX_AVATARS && (
           <input
@@ -54,7 +54,7 @@ const AddImage = () => {
           color="white"
         />
         <p className="text-sm text-gray-500 text-center">
-          Drag and drop your image here or click to select a file
+          Arrastre y suelte su imagen aquí o haga clic para seleccionar un archivo
         </p>
       </label>
       {imageUrl && modalOpen && (
@@ -68,7 +68,7 @@ const AddImage = () => {
       )}
       {avatars.length >= MAX_AVATARS && (
         <Message variant="error">
-          Max {MAX_AVATARS} images at a time. Remove one to add another.
+          Máximo {MAX_AVATARS} imágenes a la vez. Elimina una para añadir otra.
         </Message>
       )}
     </div>
@@ -106,17 +106,17 @@ const AddImageModel = ({
 
   const handleAddImage = async () => {
     if (!data.avatar || data.height === 0 || !data.name) {
-      toast.error("Please fill all the fields");
+      toast.error("Por favor, complete todos los campos");
       return;
     }
     if (autoRemoveBg) {
-      const toastId = toast.loading("Removing background...");
+      const toastId = toast.loading("Eliminando fondo...");
       try {
         const blob = await removeBg(new Blob([imageUrl]));
         setImageData("avatar", URL.createObjectURL(new Blob([blob])));
       } catch (error) {
         console.error(error);
-        toast.error("Failed to remove background", { id: toastId });
+        toast.error("Error al eliminar fondo", { id: toastId });
       }
     } else {
       setImageData("avatar", imageUrl);
@@ -133,14 +133,14 @@ const AddImageModel = ({
         className="fixed z-[9999999] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col-reverse md:flex-row w-[700px] max-w-[97vw] md:h-[550px] border-none rounded-xl shadow-xl bg-white overflow-hidden"
       >
         <div className="w-full md:w-1/2 h-full min-h-[300px] p-5 space-y-2.5 overflow-y-auto">
-          <SectionTitle className="text-xl">Add Image</SectionTitle>
+          <SectionTitle className="text-xl">Añadir imagen</SectionTitle>
           <Input
             name="name"
             value={data.name}
             onChange={(name) => setImageData("name", name)}
-            placeholder="Name"
+            placeholder="Nombre"
           />
-          <SectionTitle>Height</SectionTitle>
+          <SectionTitle>Altura</SectionTitle>
           <TabStyleRadio
             options={["cm", "ft"]}
             value={data.unit}
@@ -152,15 +152,15 @@ const AddImageModel = ({
             onChange={(height) => setImageData("height", height)}
           />
           <Button onClick={handleAddImage} className="">
-            Add Image
+            Añadir imagen
           </Button>
           <Button
             className="bg-white !text-gray-500 border !border-gray-200"
             onClick={onAdded}
           >
-            Cancel
+            Cancelar
           </Button>
-          <h1 className="text-md mt-3 mb-0 text-center">Aspect Ratio</h1>
+          <h1 className="text-md mt-3 mb-0 text-center">Relación de aspecto</h1>
           <div className="!mt-0">
             <input
               type="range"
@@ -179,9 +179,9 @@ const AddImageModel = ({
               <div className="w-[1px] h-[6px] bg-gray-700" />
             </div>
             <div className="flex items-center gap-2 justify-between">
-              <div className="text-xs">Wide</div>
-              <div className="text-xs">Square</div>
-              <div className="text-xs">High</div>
+              <div className="text-xs">Ancho</div>
+              <div className="text-xs">Cuadrado</div>
+              <div className="text-xs">Alto</div>
             </div>
           </div>
           <div className="flex items-center gap-2 mt-3">
@@ -192,7 +192,7 @@ const AddImageModel = ({
               checked={autoRemoveBg}
               onChange={() => setAutoRemoveBg(!autoRemoveBg)}
             />
-            <label htmlFor="auto-remove-bg">Auto remove background</label>
+            <label htmlFor="auto-remove-bg">Eliminar fondo automáticamente</label>
           </div>
         </div>
         <div className="w-full md:w-1/2 h-full min-h-[250px] relative border-2 border-white overflow-hidden">

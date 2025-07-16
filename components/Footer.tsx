@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="w-full h-auto bg-primary flex flex-col md:flex-row items-center justify-between p-10 gap-10 text-white">
       <h2 className="text-center">
-        &copy; 2024 Height Comparison Chart | All Rights Reserved
+        &copy; Heightcomparisonchart.com | All Rights Reserved
       </h2>
       <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10">
         {footerLinks.map((link) => (
@@ -22,16 +22,16 @@ export default Footer;
 
 const footerLinks = [
   {
-    title: "Privacy Policy",
-    href: `${APP_URL}/privacy`,
+    title: "política de privacidad",
+    href: `${APP_URL}/politica-de-privacidad`,
   },
   {
-    title: "Terms",
-    href: `${APP_URL}/terms`,
+    title: "Términos",
+    href: `${APP_URL}/terminos`,
   },
   {
     title: "FAQ",
-    href: `${APP_URL}/faq`,
+    href: `${APP_URL}/preguntas-frecuentes`,
   },
   {
     title: "Sitemap",

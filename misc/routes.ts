@@ -11,20 +11,35 @@ type link = {
 };
 export const routes: Record<string, link> = {
   home: {
-    title: "Home",
+    title: "Comparación de estatura",
     path: "/",
     showInNav: true,
   },
 
   about: {
-    title: "About",
-    path: "/about",
+    title: "Sobre nosotras",
+    path: "/sobre-nosotras",
     showInNav: true,
   },
   contact: {
-    title: "Contact",
-    path: "/contact",
+    title: "Contacto",
+    path: "/contacto",
     showInNav: true,
+  },
+  faq: {
+    title: "Preguntas Frecuentes",
+    path: "/preguntas-frecuentes",
+    showInNav: false,
+  },
+  privacy: {
+    title: "política de privacidad",
+    path: "/politica-de-privacidad",
+    showInNav: false,
+  },
+  terms: {
+    title: "Términos",
+    path: "/terminos",
+    showInNav: false,
   },
   blog: {
     title: "Blog",

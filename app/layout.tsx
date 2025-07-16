@@ -5,7 +5,7 @@ import Providers from "@/components/Providers";
 import { Toaster } from "react-hot-toast";
 import { CgSpinner } from "react-icons/cg";
 import { Suspense } from "react";
-import GoogleAdHeadCode from "@/components/google-ads/GoogleAdHeadCode";
+
 // import StickyFooter from "@/components/StickyFooter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -17,9 +17,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Height Comparison Chart - Compare Multiple Heights Visually",
+  title: "Comparación De Altura - Comparar Estaturas en Segundos",
   description:
-    "Heightcomparisonchart.com has a straightforward tool for quickly measuring your height compared to your partner, children, and pet.",
+    "HeightComparisonChart.com tiene una herramienta simple pero poderosa para comparar alturas con su pareja, hijos, mascotas, celebridades, personajes de ficción o incluso lugares famosos.",
 };
 
 export default function RootLayout({
@@ -30,7 +30,28 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning>
       <head>
-        {process.env.NODE_ENV === "production" && <GoogleAdHeadCode />}
+        <meta name="google-site-verification" content="Q5vf4BwqS69WGAaE2QZF_ovxGAVtgW_Jdq6kC_8zY7M" />
+        {`/* Microsoft Clarity */`}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "nedsxhc991");`,
+          }}
+        />
+
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LPQ1ZYFR1F"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-LPQ1ZYFR1F');`,
+          }}
+        />
       </head>
       <body className={`${poppins.variable} antialiased` + " bg-[#F7F8FD]"}>
         <Suspense

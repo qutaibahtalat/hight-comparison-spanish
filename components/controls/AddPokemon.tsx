@@ -43,11 +43,11 @@ const AddPokemon = () => {
   return (
     <div className="w-full h-full space-y-2.5">
       <SectionTitle className="text-lg font-semibold">
-        Add an object
+        Añadir
       </SectionTitle>
       <Input
         name="name"
-        placeholder="Name"
+        placeholder="Nombre"
         value={name}
         type="search"
         onChange={(value) => setName(value)}
@@ -99,7 +99,7 @@ const AddPokemon = () => {
             })}
           </div>
           {objectsData?.length === ITEMS_PER_PAGE && (
-            <Button onClick={() => setPage(page + 1)}>Load MORE</Button>
+            <Button onClick={() => setPage(page + 1)}>Cargar más</Button>
           )}
         </>
       ) : (
@@ -107,7 +107,7 @@ const AddPokemon = () => {
       )}
       {avatars.length >= MAX_AVATARS && (
         <Message variant="error">
-          Max {MAX_AVATARS} objects at a time. Remove one to add another.
+          Máximo {MAX_AVATARS} Pokémon a la vez. Elimina uno para agregar otro.
         </Message>
       )}
     </div>

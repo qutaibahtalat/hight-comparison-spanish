@@ -71,7 +71,7 @@ const ScalesAndAvatars = () => {
       >
         <div className="w-full flex justify-between items-center font-bold">
           <span>cm</span>
-          <h1>Height Comparison Chart</h1>
+          <h1>Comparación De Estatura</h1>
           <span>ft</span>
         </div>
         {Array.from({ length: TOTAL_SCALES - 1 }).map((_, index) => {
@@ -144,7 +144,7 @@ const Avatar = ({
               className="cursor-pointer p-2 border-r border-gray-200"
               onClick={() => {
                 setSelectedAvatar(avatar.id);
-                setSelectedScreen("Edit Persons");
+                setSelectedScreen("Editar personas");
               }}
             />
           )}
@@ -154,7 +154,7 @@ const Avatar = ({
             onClick={() => {
               removeAvatar(avatar.id);
               if (avatars.length === 0) {
-                setSelectedScreen("Add Person");
+                setSelectedScreen("Agregar persona");
               }
             }}
           />
@@ -324,7 +324,7 @@ function MobileAvatar({
                 className="cursor-pointer"
                 onClick={() => {
                   setSelectedAvatar(avatar.id);
-                  setSelectedScreen("Edit Persons");
+                  setSelectedScreen("Editar personas");
                 }}
               />
             )}
@@ -389,7 +389,7 @@ const HeightChart = React.memo(React.forwardRef(function HeightChart(
         }
       >
         <span>cm</span>
-        <h1 className={isMobile ? "text-xs" : ""}>Height Comparison Chart</h1>
+        <h1 className={isMobile ? "text-xs" : ""}>Comparación De Estatura</h1>
         <span>ft</span>
       </div>
       {Array.from({ length: TOTAL_SCALES - 1 }).map((_, i) => {

@@ -67,12 +67,12 @@ const NavBar = ({ className }: { className?: string }) => {
 export default NavBar;
 
 const screens = [
-  { title: "Add Person", icon: <BsPersonFillAdd /> },
-  { title: "Celebrities", icon: <BsPersonRaisedHand /> },
-  { title: "Fictional", icon: <ImTv /> },
-  { title: "Objects", icon: <BsBox /> },
-  { title: "Buildings", icon: <BsBuilding /> },
-  { title: "Animals", icon: <BiSolidDog /> },
-  { title: "Pokemon", icon: <MdCatchingPokemon /> },
-  { title: "Add Image", icon: <BsImage />, hideOnMobile: true },
+  { title: "Agregar persona", icon: <BsPersonFillAdd /> },
+  { title: "Celebridades", icon: <BsPersonRaisedHand /> },
+  { title: "Ficticia", icon: <ImTv /> },
+  { title: "Objetos", icon: <BsBox /> },
+  { title: "Edificios", icon: <BsBuilding /> },
+  { title: "Animales", icon: <BiSolidDog /> },
+  { title: "Pokémon", icon: <MdCatchingPokemon /> },
+  { title: "Agregar imagen", icon: <BsImage />, hideOnMobile: true },
 ];

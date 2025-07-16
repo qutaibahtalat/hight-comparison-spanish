@@ -60,7 +60,7 @@ export const GlobalContextProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [selectedScreen, setSelectedScreen] = useState("Add Person");
+  const [selectedScreen, setSelectedScreen] = useState("Agregar persona");
   const [selectedAvatar, setSelectedAvatar] = useState<string | null>(null);
   const {
     state: avatars,
